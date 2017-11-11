@@ -1,0 +1,26 @@
+{
+  "name": "reddit-clone-api",
+  "version": "1.0.0",
+  "description": "npm start || npm run production",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon bin/dev",
+    "clean": "rm -rf distribution",
+    "build": "npm run clean && mkdir distribution && babel server -s -d distribution",
+    "production": "npm run build && nodemon bin/production"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-register": "^6.26.0",
+    "bluebird": "^3.5.1",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "mongoose": "^4.12.4",
+    "nodemon": "^1.12.1"
+  }
+}
